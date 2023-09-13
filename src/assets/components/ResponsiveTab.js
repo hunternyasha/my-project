@@ -11,28 +11,26 @@ const ResponsiveTab = () => {
             The goal of this project is to redesign the current Baker's Inn website to enhance its user experience, 
             showcase their products effectively, and increase online engagement and conversions.`,
       title3: "View Project",
-      webLink: "https://bakers-inn-project.web.app/",
+      webLink: "https://new-bakers-inn.vercel.app/",
       id: 1,
     },
     {
       image: require("../images/ReslellMock.png"),
       title: "Resell Me",
-      title2: `Baker's Inn is a popular bakery chain that specializes in delicious pastries, bread, and cakes. 
-            The goal of this project is to redesign the current Baker's Inn website to enhance its user experience, 
-            showcase their products effectively, and increase online engagement and conversions.`,
+      title2: `Resellme is a platform that helps businesses and individuals provide domains and hosting to their clients. It was created to help businesses leverage the opportunities of the web, especially during the COVID-19 pandemic.
+
+`,
       title3: "View Project",
-      webLink: "https://bakers-inn-project.web.app/",
+      webLink: "https://new-project-69460.web.app/",
 
       id: 2,
     },
     {
       image: require("../images/bakerInnMock.png"),
-      title: "Pan Africa",
-      title2: `Baker's Inn is a popular bakery chain that specializes in delicious pastries, bread, and cakes. 
-            The goal of this project is to redesign the current Baker's Inn website to enhance its user experience, 
-            showcase their products effectively, and increase online engagement and conversions.`,
+      title: "The Mobi",
+      title2: `The MOBI is Zim’s 1st Mobile Soup Kitchen, dishing out nutritious meals & support to women & children in our most vulnerable & isolated communities.`,
       title3: "View Project",
-      webLink: "https://bakers-inn-project.web.app/",
+      webLink: "https://hunternyasha.github.io/7-Pan-Africa/",
 
       id: 3,
     },
@@ -46,17 +44,17 @@ const ResponsiveTab = () => {
               <div
                 className="col-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
                 key={cards.id}>
-                <div className="card">
-                  <Card>
-                    <img
-                      src={cards.image}
-                      alt="imgMockup"
-                      className="img-fluid"
-                    />
-                    <h4 className="card-title text-center">{cards.title}</h4>
-                    <p className="m-0 mb-4">{cards.title2}</p>
-                    <NavLink to={cards.webLink}>{cards.title3}</NavLink>
-                  </Card>
+                <div class="card h-100">
+                  <img src={cards.image} class="card-img-top" alt="imgMockup" />
+                  <div class="card-body">
+                    <h5 class="card-title">{cards.title}</h5>
+                    <p class="card-text">{cards.title2}</p>
+                  </div>
+                  <div className="card-body">
+                    <NavLink to={cards.webLink} className="card-link">
+                      {cards.title3}
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             ))}
