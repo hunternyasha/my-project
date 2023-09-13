@@ -26,11 +26,11 @@ const ResponsiveTab = () => {
       id: 2,
     },
     {
-      image: require("../images/bakerInnMock.png"),
+      image: require("../images/mobimock.png"),
       title: "The Mobi",
       title2: `The MOBI is Zim’s 1st Mobile Soup Kitchen, dishing out nutritious meals & support to women & children in our most vulnerable & isolated communities.`,
       title3: "View Project",
-      webLink: "https://hunternyasha.github.io/7-Pan-Africa/",
+      webLink: "https://hunternyasha.github.io/6-The-Mobi/",
 
       id: 3,
     },

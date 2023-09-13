@@ -14,16 +14,9 @@ const Projects = () => {
               <TabPanel header="Fully Responsive">
                 <ResponsiveTab />
               </TabPanel>
-              <TabPanel header="Front-End">
-                <p className="m-0">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                  consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Consectetur, adipisci velit, sed quia non numquam
-                  eius modi.
+              <TabPanel header="JavaScript & Node.js">
+                <p className="m-0 fs-1 text-light text-center">
+                  projects to be added soon
                 </p>
               </TabPanel>
               <TabPanel header="Personal Projects">

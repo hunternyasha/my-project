@@ -2,6 +2,7 @@ import { useState } from "react";
 import MiniNav from "./MiniNav";
 import img from "../images/Group 1.png";
 import PageTransions from "../components/PageTransions";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
   const aboutTitles = {
@@ -36,9 +37,7 @@ const About = () => {
           <div className="container">
             <div className="row g-4">
               <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 d-flex align-items-center">
-
-                      <img src={img} alt="" className="img-fluid " />
-  
+                <img src={img} alt="" className="img-fluid " />
               </div>
               <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
                 <h2 className="mb-3">{aboutTitles.heading}</h2>
@@ -55,9 +54,12 @@ const About = () => {
                     </div>
                   ))}
                 </div>
-                <button className="btn bg-light mt-4">
-                  {aboutTitles.btnTile}
-                </button>
+                <NavLink to='/Contact'>
+                  {" "}
+                  <button className="btn bg-light mt-4">
+                    {aboutTitles.btnTile}
+                  </button>
+                </NavLink>
               </div>
             </div>
             <MiniNav />
