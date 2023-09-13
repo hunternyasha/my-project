@@ -1,10 +1,12 @@
-import { NavLink, Route, Routes } from "react-router-dom";
-import { useRef } from "react";
+import { NavLink, Route, Routes, useLocation } from "react-router-dom";
+import React, { useRef } from "react";
 import { Sling as Hamburger } from "hamburger-react";
-import Home from "./Home";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import { AnimatePresence } from "framer-motion";
+import Loading from "../components/Loading";
+const Home = React.lazy(() => import("./Home"));
+const About = React.lazy(() => import("./About"));
+const Projects = React.lazy(() => import("./Projects"));
+const Contact = React.lazy(() => import("./Contact"));
 
 const Navbar = () => {
   const navRef = useRef();
@@ -12,6 +14,7 @@ const Navbar = () => {
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
+  const location = useLocation();
 
   return (
     <>
@@ -46,13 +49,42 @@ const Navbar = () => {
           </div>
         </header>
       </div>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Projects" element={<Projects />} />
-        <Route path="/Contact" element={<Contact />} />
-      </Routes>
+      <AnimatePresence initial={false}>
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={
+              <React.Suspense fallback={<Loading />}>
+                <Home />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/About"
+            element={
+              <React.Suspense fallback={<Loading />}>
+                <About />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/Projects"
+            element={
+              <React.Suspense fallback={<Loading />}>
+                <Projects />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/Contact"
+            element={
+              <React.Suspense fallback={<Loading />}>
+                <Contact />
+              </React.Suspense>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
     </>
   );
 };

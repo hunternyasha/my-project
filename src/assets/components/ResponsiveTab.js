@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Card } from "primereact/card";
 import { NavLink } from "react-router-dom";
+
 const ResponsiveTab = () => {
   const [responCards] = useState([
     {
@@ -10,6 +11,7 @@ const ResponsiveTab = () => {
             The goal of this project is to redesign the current Baker's Inn website to enhance its user experience, 
             showcase their products effectively, and increase online engagement and conversions.`,
       title3: "View Project",
+      webLink: "https://bakers-inn-project.web.app/",
       id: 1,
     },
     {
@@ -19,6 +21,8 @@ const ResponsiveTab = () => {
             The goal of this project is to redesign the current Baker's Inn website to enhance its user experience, 
             showcase their products effectively, and increase online engagement and conversions.`,
       title3: "View Project",
+      webLink: "https://bakers-inn-project.web.app/",
+
       id: 2,
     },
     {
@@ -28,25 +32,30 @@ const ResponsiveTab = () => {
             The goal of this project is to redesign the current Baker's Inn website to enhance its user experience, 
             showcase their products effectively, and increase online engagement and conversions.`,
       title3: "View Project",
+      webLink: "https://bakers-inn-project.web.app/",
+
       id: 3,
     },
   ]);
   return (
     <>
-      <div className="responsive">
+      <div className="project">
         <div className="container-fluid">
           <div className="row">
             {responCards.map((cards) => (
               <div
-                className="col-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-center"
+                className="col-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
                 key={cards.id}>
                 <div className="card">
-                  <Card title={cards.title}>
-                    <img src={cards.image} alt="imgMockup" className="img-fluid" />
-                    <p className="m-0"> 
-                    {cards.title2}
-                    </p>
-                    <NavLink >{cards.title3}</NavLink>
+                  <Card>
+                    <img
+                      src={cards.image}
+                      alt="imgMockup"
+                      className="img-fluid"
+                    />
+                    <h4 className="card-title text-center">{cards.title}</h4>
+                    <p className="m-0 mb-4">{cards.title2}</p>
+                    <NavLink to={cards.webLink}>{cards.title3}</NavLink>
                   </Card>
                 </div>
               </div>

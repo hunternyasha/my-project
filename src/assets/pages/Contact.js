@@ -3,9 +3,10 @@ import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
 
 
-
+import PageTransions from "../components/PageTransions";
 import { Button } from "primereact/button";
 import Footer from "./Footer";
+import MiniNav from "./MiniNav";
 
 const Contact = () => {
   const contactTitles = {
@@ -27,73 +28,80 @@ const Contact = () => {
 
   return (
     <>
-      <div className="contact">
-        <h2 className="text-center mb-5">{contactTitles.conTitle}</h2>
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-md-6 col-xl-6 col-xxl-6">
-              <div className="row ">
-                <div className="col-12 col-md-6">
-                  <span className="p-float-label">
-                    <InputText
-                      id="username"
-                      className="p-inputtext-lg"
-                      value={userName}
-                      onChange={(e) => setUserName(e.target.userName)}
-                    />
-                    <label htmlFor="username">{contactTitles.conTitle2}</label>
-                  </span>
+      <PageTransions>
+        <div className="contact">
+          <h2 className="text-center mb-5">{contactTitles.conTitle}</h2>
+          <div className="container">
+            <div className="row">
+              <div className="col-12 col-md-6 col-xl-6 col-xxl-6">
+                <div className="row ">
+                  <div className="col-12 col-md-6">
+                    <span className="p-float-label">
+                      <InputText
+                        id="username"
+                        className="p-inputtext-lg"
+                        value={userName}
+                        onChange={(e) => setUserName(e.target.userName)}
+                      />
+                      <label htmlFor="username">
+                        {contactTitles.conTitle2}
+                      </label>
+                    </span>
+                  </div>
+                  <div className="col-12 col-md-6">
+                    <span className="p-float-label mb-4">
+                      <InputText
+                        id="username"
+                        className="p-inputtext-lg"
+                        value={sName}
+                        onChange={(e) => setSName(e.target.sName)}
+                      />
+                      <label htmlFor="username">
+                        {contactTitles.conTitle3}
+                      </label>
+                    </span>
+                  </div>
+                  <div className="col-12 col-md-12">
+                    <span className="p-float-label mb-4">
+                      <InputText
+                        id="email"
+                        className="p-inputtext-lg"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.email)}
+                      />
+                      <label htmlFor="email">{contactTitles.conTitle4}</label>
+                    </span>
+                  </div>
+                  <div className="col-12 col-md-12">
+                    <span className="p-float-label mb-4">
+                      <InputTextarea
+                        id="description"
+                        value={msg}
+                        className="textrea"
+                        onChange={(e) => setMsg(e.target.value)}
+                        rows={10}
+                        cols={30}
+                      />
+                      <label htmlFor="description" className="msgLabel">
+                        {contactTitles.conTitle5}
+                      </label>
+                    </span>
+                  </div>
                 </div>
-                <div className="col-12 col-md-6">
-                  <span className="p-float-label mb-4">
-                    <InputText
-                      id="username"
-                      className="p-inputtext-lg"
-                      value={sName}
-                      onChange={(e) => setSName(e.target.sName)}
-                    />
-                    <label htmlFor="username">{contactTitles.conTitle3}</label>
-                  </span>
-                </div>
-                <div className="col-12 col-md-12">
-                  <span className="p-float-label mb-4">
-                    <InputText
-                      id="email"
-                      className="p-inputtext-lg"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.email)}
-                    />
-                    <label htmlFor="email">{contactTitles.conTitle4}</label>
-                  </span>
-                </div>
-                <div className="col-12 col-md-12">
-                  <span className="p-float-label mb-4">
-                    <InputTextarea
-                      id="description"
-                      value={msg}
-                      className="textrea"
-                      onChange={(e) => setMsg(e.target.value)}
-                      rows={10}
-                      cols={30}
-                    />
-                    <label htmlFor="description" className="msgLabel">
-                      {contactTitles.conTitle5}
-                    </label>
-                  </span>
-                </div>
+                <Button label={contactTitles.btnTxt} />
               </div>
-              <Button label={contactTitles.btnTxt} />
-            </div>
-            <div className="col-12 col-md-6 col-xl-6 col-xxl-6">
-              <h3>{contactTitles.conTitle6}</h3>
-              <h2>{contactTitles.conTitle7}</h2>
-              <p>{contactTitles.conTitle8}</p>
+              <div className="col-12 col-md-6 col-xl-6 col-xxl-6">
+                <h3>{contactTitles.conTitle6}</h3>
+                <h2>{contactTitles.conTitle7}</h2>
+                <p>{contactTitles.conTitle8}</p>
+              </div>
             </div>
           </div>
+          <MiniNav />
         </div>
-      </div>
 
-      <Footer />
+        <Footer />
+      </PageTransions>
     </>
   );
 };
