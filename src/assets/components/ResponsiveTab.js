@@ -34,15 +34,35 @@ const ResponsiveTab = () => {
 
       id: 3,
     },
+    {
+      image: require("../images/nowallsmoc.png"),
+      title: "No Walls",
+      title2: `No Walls Media, a company founded in 2020 to help businesses communicate with their customers during the COVID-19 pandemic, offers a variety of services, including branding, advertising, and digital marketing.
+`,
+      title3: "View Project",
+      webLink: "https://hunternyasha.github.io/6-The-Mobi/",
+
+      id: 4,
+    },
+    {
+      image: require("../images/Group 3.png"),
+      title: "Web Quiz App",
+      title2: `This quiz web app is a fun and interactive way to test your knowledge on a variety of topics. The web app features a variety of question types, including multiple choice. You can also choose from a variety of questions, so you can challenge yourself or simply have some fun.
+`,
+      title3: "View Project",
+      webLink: "https://hunternyasha.github.io/6-The-Mobi/",
+
+      id: 5,
+    },
   ]);
   return (
     <>
       <div className="project">
         <div className="container-fluid">
-          <div className="row">
+          <div className="row g-4">
             {responCards.map((cards) => (
               <div
-                className="col-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+                className="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
                 key={cards.id}>
                 <div class="card h-100">
                   <img src={cards.image} class="card-img-top" alt="imgMockup" />

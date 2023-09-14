@@ -20,7 +20,9 @@ const Projects = () => {
                 </p>
               </TabPanel>
               <TabPanel header="Personal Projects">
-                <Personal />
+                <p className="m-0 fs-1 text-light text-center">
+                  projects to be added soon
+                </p>
               </TabPanel>
             </TabView>
           </div>
