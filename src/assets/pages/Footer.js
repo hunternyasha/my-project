@@ -8,18 +8,18 @@ const Footer = () => {
   };
   const [social] = useState([
     {
-      image: require('../images/github.png'),
+      image: "https://img.icons8.com/ios-filled/65/github.png",
       navLink: 'https://github.com/hunternyasha',
       id: 1
     },
     {
-      image: require('../images/insta.png'),
-      navLink: 'https://www.instagram.com/hunternyasha21/',
+      image: 'https://img.icons8.com/fluency/65/linkedin.png',
+      navLink: 'https://www.linkedin.com/in/nyasha-tanganyika-a9636124a/',
       id: 2
     },
     {
-      image: require('../images/face.png'),
-      navLink: 'https://www.linkedin.com/in/nyasha-tanganyika-a9636124a/',
+      image:' https://img.icons8.com/fluency/65/facebook-new.png',
+      navLink: 'https://www.facebook.com/nyashahunter.tanganyika',
       id: 3
     }
   ])
