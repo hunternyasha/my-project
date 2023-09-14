@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <div className="banner">
         <div className="container text-center">
-          <h1>A full stack-developer</h1>
+          <h1>Front-end Web Developer</h1>
           <p className="mb-5">Specialising in JS. C#.React. JS</p>
           <NavLink to="https://docs.google.com/document/d/1-iei2I7q0gNEXzPt9_7eajAQJA1_hAyiWoKLanAofko/edit?usp=sharing">
             <Button label="Download CV" className="text-center" />
