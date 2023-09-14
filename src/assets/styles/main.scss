@@ -537,8 +537,17 @@ footer {
     .social-icons {
       justify-content: center;
       margin-top: 20px;
-      .icons {
-      margin: 0;
+      .icons:nth-child(1) {
+       margin: 0;
+      }
+      .icons:nth-child(2) {
+        margin: 0;
+      }
+      .icons:nth-child(3) {
+         margin: 0;
+      }
+      .icons{
+        margin: 0 40px;
       }
     }
   }
