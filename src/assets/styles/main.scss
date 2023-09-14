@@ -516,11 +516,19 @@ footer {
   }
   .contact {
     text-align: center;
+    h2{
+      display: none;
+    }
     h3 {
       margin: 10px 0;
+      
     }
     p {
       width: 100%;
+      margin-bottom: 25px;
+    }
+    .row{
+      flex-direction: column-reverse;
     }
   }
   footer {
