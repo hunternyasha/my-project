@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const MiniNav = () => {
   return (
     <>
-      <nav className="d-flex text-light justify-content-end miniNav">
+      <nav className=" text-light  miniNav">
         <NavLink to="/" className="link">
           01
         </NavLink>

@@ -25,11 +25,11 @@ const Footer = () => {
         <footer>
           <div className="container">
             <div className="row">
-              <div className="col-12 col-md-4">
+              <div className="col-12 col-md-12 col-lg-4">
                 <h4>{footerTitles.title}</h4>
                 <h5>{footerTitles.title2}</h5>
               </div>
-              <div className="col-12 col-md-4 align-items-center d-flex">
+              <div className="col-12 col-md-6 col-lg-4  align-items-center d-flex">
                 <nav className="d-flex text-light footerNav">
                   <NavLink to="/" className="nav-link active">
                     Home
@@ -45,7 +45,7 @@ const Footer = () => {
                   </NavLink>
                 </nav>
               </div>
-              <div className="col-12 col-md-4  align-items-center d-flex">
+              <div className="col-12 col-md-6 col-lg-4 align-items-center social-icons d-flex">
                 {social.map((icons) => (
                   <div className="icons" key={icons.id}>
                     <img

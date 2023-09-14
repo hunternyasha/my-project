@@ -36,10 +36,10 @@ const About = () => {
         <div className="about">
           <div className="container">
             <div className="row g-4">
-              <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 d-flex align-items-center">
+              <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex align-items-center">
                 <img src={img} alt="" className="img-fluid " />
               </div>
-              <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
+              <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 ">
                 <h2 className="mb-3">{aboutTitles.heading}</h2>
                 <p>{aboutTitles.heading2}</p>
                 <div className="row">

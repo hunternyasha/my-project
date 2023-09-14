@@ -9,18 +9,13 @@
 -----------------------------------------------------------
 Table of Contents
 ===========================================================
-  1. Reset & Typography 
-  2. Nav & Banner
-  3. About
-  4. Get Started
-  5. Our Features
-  6. Cases
-  7. Testimonial
-  8. Faq
-  9. Sec Features
-  10. Sign Up
-  11. Footer
-  12. Media Query's
+
+  1. Nav & Banner
+  2. About
+  3. Projects
+  4. Contact
+  5. Footer
+  6. Media Query's
       0.1. 575px
 --------------------------------------------------------
 
@@ -97,6 +92,8 @@ html {
   }
 }
 .miniNav {
+  display: flex;
+  justify-content: end;
   a {
     color: rgba(255, 255, 255, 0.45);
     font-family: Jost;
@@ -157,110 +154,12 @@ header {
   }
 }
 
-@media screen and (min-width: 320px) {
-  header {
-    justify-content: space-between;
-    .navbar-brand {
-      img {
-        width: 50%;
-      }
-    }
-    .btn {
-      visibility: visible;
-      opacity: 1;
-      z-index: 99;
-    }
-    nav {
-      position: fixed;
-      top: -100vh;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      background-color: #374957;
-      transition: 1s;
-      z-index: 99;
-      a:nth-child(4) {
-        margin: 0;
-      }
-    }
-    .responsive_nav {
-      transform: translateY(100vh);
-    }
-  }
-}
 /* ------------------------------
- 1. About
+ 2. About
 ----------------------------- */
-.about {
-  background: #374957;
-}
-/* ------------------------------
- 2. contact
------------------------------ */
-.contact {
-  background-color: #374957;
-  padding: 50px 0 50px 0;
-  h2 {
-    font-size: 40px;
-    color: white;
-    font-family: "NunitoReg";
-    font-weight: 800;
-  }
-  h3 {
-    font-family: "Jostreg";
-    color: white;
-    font-size: 35px;
-    font-weight: 500;
-    margin-bottom: 50px;
-  }
-  p {
-    color: #fff;
-    font-family: "Jostreg";
-    font-size: 25px;
-    font-weight: 400;
-    margin-top: 20px;
-    width: 77%;
-  }
-  .p-inputtext-lg {
-    width: 100%;
-    color: rgba(0, 0, 0, 0.9);
-    border-radius: 0;
-    border: none;
-    font-weight: 500;
-  }
-  label {
-    font-size: 15px;
-    font-family: "NunitoReg";
-    font-weight: 500;
-  }
-  .textrea {
-    width: 100%;
-    color: black;
-    border-radius: 0;
-    font-weight: 500;
-    border: none;
-  }
-  .p-button {
-    color: black;
-    background-color: #fff;
-    border: 1px solid;
-    padding: 0.75rem 7.25rem;
-    font-family: "NunitoReg";
-    font-size: 15px;
-    font-weight: 700;
-  }
-}
-.app {
-  background-color: #374957;
-}
-
 .about {
   padding: 30px 0;
+  background: #374957;
   h2 {
     font-size: 40px;
     color: white;
@@ -302,6 +201,9 @@ header {
     padding: 10px 50px;
   }
 }
+/* ------------------------------
+ 3. Projects
+----------------------------- */
 .work {
   background-color: #374957;
   padding: 20px 0;
@@ -366,6 +268,93 @@ header {
     }
   }
 }
+/* ------------------------------
+4. contact
+----------------------------- */
+.contact {
+  background-color: #374957;
+  padding: 50px 0 50px 0;
+  h2 {
+    font-size: 40px;
+    color: white;
+    font-family: "NunitoReg";
+    font-weight: 800;
+  }
+  h3 {
+    font-family: "Jostreg";
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+  p {
+    color: #fff;
+    font-family: "Jostreg";
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 20px;
+    width: 77%;
+  }
+  form {
+    label {
+      font-size: 15px;
+      font-family: "NunitoReg";
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.9);
+    }
+    .form-control {
+      width: 100%;
+
+      border-radius: 0;
+      border: none;
+      font-weight: 500;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+        box-shadow 0.2s;
+    }
+    .textarea {
+      width: 100%;
+      color: black;
+      border-radius: 0;
+      font-weight: 500;
+      padding: 44px 5px 138px 10px;
+      border: none;
+      border: 1px solid #ced4da;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+        box-shadow 0.2s;
+      appearance: none;
+      margin-bottom: 10px;
+    }
+  }
+
+  .submit {
+    color: black;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 0.75rem 7.25rem;
+
+    font-size: 15px;
+    font-weight: 700;
+    input {
+      background: transparent;
+      border: none;
+      color: #000;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 700;
+      font-family: "NunitoReg";
+    }
+  }
+}
+.app {
+  background-color: #374957;
+}
+
+/* ------------------------------
+5. Footer
+----------------------------- */
+
+
 footer {
   background: #d9d9d9;
   padding: 25px 0 0 0;
@@ -411,5 +400,121 @@ footer {
     }
   }
 }
-@media screen and (max-width: 425px) {
+
+/* ------------------------------
+5. Media Query's
+----------------------------- */
+@media screen and (min-width: 320px) {
+  header {
+    justify-content: space-between;
+    .navbar-brand {
+      font-size: 20px;
+    }
+    .btn {
+      visibility: visible;
+      opacity: 1;
+      z-index: 99;
+    }
+    nav {
+      position: fixed;
+      top: -100vh;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: #374957;
+      transition: 1s;
+      z-index: 99;
+      .nav-link {
+        font-size: 20px;
+      }
+      a:nth-child(4) {
+        margin: 0;
+      }
+    }
+    .responsive_nav {
+      transform: translateY(100vh);
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  header {
+    justify-content: space-between;
+    .navbar-brand {
+      font-size: 20px;
+    }
+    .btn {
+      visibility: visible;
+      opacity: 1;
+      z-index: 99;
+    }
+    nav {
+      position: fixed;
+      top: -100vh;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: #374957;
+      transition: 1s;
+      z-index: 99;
+      .nav-link {
+        font-size: 20px;
+      }
+      a:nth-child(4) {
+        margin: 0;
+      }
+    }
+    .responsive_nav {
+      transform: translateY(100vh);
+    }
+  }
+  .banner {
+    h1 {
+      text-align: center;
+      font-size: 50px;
+    }
+    p {
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+  .miniNav {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .work {
+    .innerWork {
+      .p-tabview {
+        .p-tabview-nav {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  .contact {
+    text-align: center;
+    h3 {
+      margin: 10px 0;
+    }
+    p {
+      width: 100%;
+    }
+  }
+  footer {
+    nav {
+      flex-direction: column;
+    }
+    .social-icons {
+      justify-content: center;
+    }
+  }
 }

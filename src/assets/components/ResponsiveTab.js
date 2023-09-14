@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Card } from "primereact/card";
 import { NavLink } from "react-router-dom";
 
 const ResponsiveTab = () => {
