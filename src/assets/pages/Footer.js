@@ -41,21 +41,21 @@ const Footer = () => {
                   About
                 </NavLink>
                 <NavLink to="/Projects" className="nav-link">
-                  My Projects
+                Projects
                 </NavLink>
                 <NavLink to="/Contact" className="nav-link">
-                  Conact Me
+                  Contact
                 </NavLink>
               </nav>
             </div>
             <div className="col-12 col-md-6 col-lg-4 align-items-center social-icons d-flex">
               {social.map((icons) => (
                 <div className="icons" key={icons.id}>
-                  <NavLink to={icons.navLink}>
+                  <NavLink to={icons.navLink} >
                     <img
                       src={icons.image}
                       alt="social link"
-                      className="img-fluid mx-5"
+                      className="img-fluid "
                     />
                   </NavLink>
                 </div>

@@ -126,10 +126,10 @@ header {
     font-weight: 700;
     line-height: normal;
   }
-  .navbar-brand:hover{
+  .navbar-brand:hover {
     color: white;
   }
-  .navbar-brand.active{
+  .navbar-brand.active {
     color: #fff;
   }
   nav {
@@ -360,7 +360,6 @@ header {
 5. Footer
 ----------------------------- */
 
-
 footer {
   background: #d9d9d9;
   padding: 25px 0 0 0;
@@ -389,6 +388,17 @@ footer {
       font-weight: 600;
       line-height: normal;
       padding: 0px 15px;
+    }
+  }
+  .social-icons {
+    .icons:nth-child(1) {
+      margin-left: 40px;
+    }
+    .icons:nth-child(2) {
+      margin-left: 40px;
+    }
+    .icons:nth-child(3) {
+      margin-left: 40px;
     }
   }
   hr {
@@ -514,11 +524,22 @@ footer {
     }
   }
   footer {
-    nav {
-      flex-direction: column;
+    text-align: center;
+    .footerNav {
+      // flex-direction: column;
+      // display: none;
+      margin-top: 10px;
+      .nav-link {
+        font-size: 15px;
+      }
     }
+
     .social-icons {
       justify-content: center;
+      margin-top: 20px;
+      .icons {
+      margin: 0;
+      }
     }
   }
 }
